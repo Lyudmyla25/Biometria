@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread('/Users/I533569/PycharmProjects/Biometria/Lab4/retina.jpg', 0)
+image = cv2.imread('retina.jpg', 0)
 orig = image.copy()
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 

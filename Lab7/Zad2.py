@@ -3,8 +3,8 @@ import cv2
 from skimage.color import rgb2gray
 from sklearn.cluster import KMeans
 
-img = cv2.imread('GroupPhoto-e1577801886654-630x557.jpg')
-img_grey = cv2.imread('GroupPhoto-e1577801886654-630x557.jpg', 0)
+img = cv2.imread('Lab7/GroupPhoto-e1577801886654-630x557.jpg')
+img_grey = cv2.imread('Lab7/GroupPhoto-e1577801886654-630x557.jpg', 0)
 
 img_grey_r = img_grey.reshape(img_grey.shape[0] * img_grey.shape[1])
 for i in range(img_grey_r.shape[0]):
@@ -37,7 +37,7 @@ _, thresh_global = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 thresh_local = cv2.adaptiveThreshold(img_grey, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
 
 # cv2.imshow('after', cluster_pic.astype("uint8"))
-# cv2.imshow('edges', edges)
+cv2.imshow('edges', edges)
 # cv2.imshow('thresh_global', thresh_global)
 cv2.imshow('thresh_local', thresh_local)
 # cv2.imshow('region_based_segmentation', region_based_segmentation)
